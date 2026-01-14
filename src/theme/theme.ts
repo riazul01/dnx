@@ -5,6 +5,8 @@ import palette from './palette';
 
 import Stack from './components/layout/Stack';
 import Paper from './components/surface/Paper';
+import Link from './components/navigation/Link';
+import Drawer from './components/navigation/Drawer';
 
 import Button from './components/button/Button';
 import ButtonBase from './components/button/ButtonBase';
@@ -27,6 +29,12 @@ import ListItemButton from './components/list/ListItemButton';
 import Collapse from './components/list/Collapse';
 import MenuItem from './components/list/MenuItem';
 
+import Card from './components/card/Card';
+import CardMedia from './components/card/CardMedia';
+import CardHeader from './components/card/CardHeader';
+import CardContent from './components/card/CardContent';
+import CardActions from './components/card/CardActions';
+
 import CssBaseline from './components/utils/CssBaseline';
 
 export const theme = createTheme({
@@ -36,6 +44,8 @@ export const theme = createTheme({
   components: {
     MuiStack: Stack,
     MuiPaper: Paper,
+    MuiLink: Link,
+    MuiDrawer: Drawer,
 
     MuiButton: Button,
     MuiButtonBase: ButtonBase,
@@ -57,6 +67,12 @@ export const theme = createTheme({
     MuiListItemButton: ListItemButton,
     MuiCollapse: Collapse,
     MuiMenuItem: MenuItem,
+
+    MuiCard: Card,
+    MuiCardMedia: CardMedia,
+    MuiCardHeader: CardHeader,
+    MuiCardContent: CardContent,
+    MuiCardActions: CardActions,
 
     MuiCssBaseline: CssBaseline,
   },
