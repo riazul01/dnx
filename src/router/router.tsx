@@ -1,8 +1,9 @@
-import { Suspense, lazy } from "react";
-import { Outlet, createBrowserRouter } from "react-router";
+import { Suspense, lazy } from 'react';
+import { Outlet, createBrowserRouter } from 'react-router';
+import MainLayout from 'layouts/main-layout';
 
-const App = lazy(() => import("App"));
-const Dashboard = lazy(() => import("pages/Dashboard"));
+const App = lazy(() => import('App'));
+const Dashboard = lazy(() => import('pages/Dashboard'));
 
 const router = createBrowserRouter(
   [
@@ -14,11 +15,13 @@ const router = createBrowserRouter(
       ),
       children: [
         {
-          path: "/",
+          path: '/',
           element: (
-            <Suspense fallback={<p>Loading...</p>}>
-              <Outlet />
-            </Suspense>
+            <MainLayout>
+              <Suspense fallback={<p>Loading...</p>}>
+                <Outlet />
+              </Suspense>
+            </MainLayout>
           ),
           children: [
             {
@@ -31,8 +34,8 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/dnx",
-  }
+    basename: '/dnx',
+  },
 );
 
 export default router;
