@@ -3,12 +3,21 @@ import Stack from '@mui/material/Stack';
 import Footer from 'components/common/Footer';
 import TaskToday from 'components/sections/dashboard/TaskToday';
 import WeekCalendar from 'components/sections/dashboard/WeekCalendar';
+import Activity from 'components/sections/dashboard/activity/Activity';
+import RunningTask from 'components/sections/dashboard/running-task/RunningTask';
 
 const Dashboard = () => {
   return (
     <Stack direction={{ xs: 'column', md: 'row' }}>
       <Stack p={3.5} spacing={3.5} direction="column" width={{ xs: 1, md: 'calc(100% - 460px)' }}>
-        <h1>Hello</h1>
+        <Stack
+          width={1}
+          spacing={3.5}
+          direction={{ xs: 'column', sm: 'row', md: 'column', xl: 'row' }}
+        >
+          <RunningTask />
+          <Activity />
+        </Stack>
         <Footer />
       </Stack>
 
