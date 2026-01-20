@@ -7,6 +7,7 @@ import Activity from 'components/sections/dashboard/activity/Activity';
 import RunningTask from 'components/sections/dashboard/running-task/RunningTask';
 import MonthlyMentors from 'components/sections/dashboard/monthly-mentors/MonthlyMentors';
 import UpcomingTask from 'components/sections/dashboard/upcoming-task/UpcomingTask';
+import TaskOverview from 'components/sections/dashboard/task-overview/TaskOverview';
 
 const Dashboard = () => {
   return (
@@ -23,6 +24,7 @@ const Dashboard = () => {
 
         <MonthlyMentors />
         <UpcomingTask />
+        <TaskOverview />
         
         <Footer />
       </Stack>
