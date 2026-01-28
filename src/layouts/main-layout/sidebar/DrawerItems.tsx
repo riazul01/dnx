@@ -1,4 +1,4 @@
-import sitemap from 'router/sitemap';
+import sitemap from 'routes/sitemap';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import Stack from '@mui/material/Stack';
