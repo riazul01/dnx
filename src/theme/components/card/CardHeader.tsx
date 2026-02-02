@@ -1,4 +1,5 @@
 import type { Theme, Components } from '@mui/material/styles';
+import { iconButtonClasses } from '@mui/material';
 
 const CardHeader: Components<Omit<Theme, 'components'>>['MuiCardHeader'] = {
   styleOverrides: {
@@ -10,7 +11,7 @@ const CardHeader: Components<Omit<Theme, 'components'>>['MuiCardHeader'] = {
       fontSize: theme.typography.body2.fontSize,
     }),
     action: ({ theme }) => ({
-      '& .MuiIconButton-root': {
+      [`& .${iconButtonClasses.root}`]: {
         border: 'none',
         padding: theme.spacing(0.75),
         '&:hover': { backgroundColor: theme.palette.info.lighter },

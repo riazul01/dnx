@@ -1,17 +1,17 @@
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Slider from '@mui/material/Slider';
-import Divider from '@mui/material/Divider';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import IconButton from '@mui/material/IconButton';
+import Divider from '@mui/material/Divider';
+import Slider from '@mui/material/Slider';
+import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import AvatarGroup from '@mui/material/AvatarGroup';
 import IconifyIcon from 'components/base/IconifyIcon';
 import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, Thumb5 } from 'data/images';
 
@@ -88,11 +88,9 @@ const TaskToday = () => {
           </Stack>
 
           <AvatarGroup max={5}>
-            <Avatar alt="avatar1" src={Avatar1} />
-            <Avatar alt="avatar2" src={Avatar2} />
-            <Avatar alt="avatar3" src={Avatar3} />
-            <Avatar alt="avatar4" src={Avatar4} />
-            <Avatar alt="avatar5" src={Avatar5} />
+            {[Avatar1, Avatar2, Avatar3, Avatar4, Avatar5].map((src, index) => (
+              <Avatar key={index} alt={`avatar${index + 1}`} src={src} />
+            ))}
           </AvatarGroup>
         </Stack>
 

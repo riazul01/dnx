@@ -1,4 +1,5 @@
 import type { Theme, Components } from '@mui/material/styles';
+import { iconButtonClasses } from '@mui/material';
 
 const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
   styleOverrides: {
@@ -52,7 +53,7 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
       fontWeight: `${theme.typography.caption.fontWeight} !important`,
     }),
     iconButtonContainer: () => ({
-      '& .MuiIconButton-root': {
+      [`& .${iconButtonClasses.root}`]: {
         backgroundColor: 'transparent !important',
         border: 'none',
       },

@@ -1,7 +1,7 @@
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import Button, { buttonClasses } from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
@@ -50,7 +50,7 @@ const MentorCard = ({ data }: MentorCardProps) => {
             size="medium"
             sx={{
               color: data.followed ? 'text.secondary' : 'primary.main',
-              '& .MuiButton-startIcon': { mr: 0, pointerEvents: 'none' },
+              [`& .${buttonClasses.startIcon}`]: { mr: 0, pointerEvents: 'none' },
             }}
             startIcon={data.followed ? '' : <IconifyIcon icon="gridicons:plus-small" />}
             fullWidth

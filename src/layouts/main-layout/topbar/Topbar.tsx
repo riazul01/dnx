@@ -68,12 +68,14 @@ const Topbar = ({ isClosing, mobileOpen, setMobileOpen }: TopbarProps) => {
           variant="filled"
           placeholder="Search Task"
           sx={{ width: 350, display: { xs: 'none', md: 'flex' } }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconifyIcon icon="mynaui:search" />
-              </InputAdornment>
-            ),
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconifyIcon icon="mynaui:search" />
+                </InputAdornment>
+              ),
+            },
           }}
         />
       </Stack>

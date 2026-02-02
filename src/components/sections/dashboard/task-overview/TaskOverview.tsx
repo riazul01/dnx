@@ -27,12 +27,14 @@ const TaskOverview = () => {
           value={searchText}
           onChange={handleInputChange}
           sx={{ width: 1, maxWidth: 250 }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconifyIcon icon={'mynaui:search'} />
-              </InputAdornment>
-            ),
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconifyIcon icon="mynaui:search" />
+                </InputAdornment>
+              ),
+            },
           }}
         />
       </Stack>

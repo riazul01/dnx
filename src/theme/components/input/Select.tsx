@@ -1,13 +1,14 @@
+import { boxClasses, inputBaseClasses } from '@mui/material';
 import type { Theme, Components } from '@mui/material/styles';
 
 const Select: Components<Omit<Theme, 'components'>>['MuiSelect'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       padding: 0,
-      '&.MuiInputBase-root': {
+      [`&.${inputBaseClasses.root}`]: {
         backgroundColor: 'transparent !important',
       },
-      '& .MuiBox-root': {
+      [`& .${boxClasses.root}`]: {
         fontSize: theme.typography.h4.fontSize,
       },
     }),

@@ -91,12 +91,14 @@ const Signup = () => {
           autoComplete="email"
           fullWidth
           required
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <IconifyIcon icon="hugeicons:mail-at-sign-02" />
-              </InputAdornment>
-            ),
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <IconifyIcon icon="hugeicons:mail-at-sign-02" />
+                </InputAdornment>
+              ),
+            },
           }}
         />
         <TextField
@@ -110,33 +112,35 @@ const Signup = () => {
           autoComplete="current-password"
           fullWidth
           required
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <IconifyIcon icon="hugeicons:lock-key" />
-              </InputAdornment>
-            ),
-            endAdornment: (
-              <InputAdornment
-                position="end"
-                sx={{
-                  opacity: user.password ? 1 : 0,
-                  pointerEvents: user.password ? 'auto' : 'none',
-                }}
-              >
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={() => setShowPassword(!showPassword)}
-                  sx={{ border: 'none', bgcolor: 'transparent !important' }}
-                  edge="end"
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <IconifyIcon icon="hugeicons:lock-key" />
+                </InputAdornment>
+              ),
+              endAdornment: (
+                <InputAdornment
+                  position="end"
+                  sx={{
+                    opacity: user.password ? 1 : 0,
+                    pointerEvents: user.password ? 'auto' : 'none',
+                  }}
                 >
-                  <IconifyIcon
-                    icon={showPassword ? 'fluent-mdl2:view' : 'fluent-mdl2:hide-3'}
-                    color="neutral.light"
-                  />
-                </IconButton>
-              </InputAdornment>
-            ),
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={() => setShowPassword(!showPassword)}
+                    sx={{ border: 'none', bgcolor: 'transparent !important' }}
+                    edge="end"
+                  >
+                    <IconifyIcon
+                      icon={showPassword ? 'fluent-mdl2:view' : 'fluent-mdl2:hide-3'}
+                      color="neutral.light"
+                    />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            },
           }}
         />
 

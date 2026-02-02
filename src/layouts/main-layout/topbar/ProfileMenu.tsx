@@ -10,6 +10,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import IconifyIcon from 'components/base/IconifyIcon';
+import { listClasses } from '@mui/material';
 
 interface MenuItems {
   id: number;
@@ -89,7 +90,7 @@ const ProfileMenu = () => {
         onClick={handleProfileMenuClose}
         sx={{
           mt: 1.5,
-          '& .MuiList-root': {
+          [`& .${listClasses.root}`]: {
             p: 0,
             width: 230,
           },
