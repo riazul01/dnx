@@ -8,7 +8,7 @@ const useResizeObserver = (ref: RefObject<HTMLElement | null>) => {
     if (!ref.current) return;
 
     const element = ref.current;
-    const observer = new ResizeObserver(entries => {
+    const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
       if (entry) {
         setWidth(entry.contentRect.width);

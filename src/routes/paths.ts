@@ -1,8 +1,8 @@
 export const rootPaths = {
-  root: "/",
-  pageRoot: "pages",
-  authRoot: "authentication",
-  errorRoot: "error",
+  root: '/',
+  pageRoot: 'pages',
+  authRoot: 'authentication',
+  errorRoot: 'error',
 };
 
 export default {

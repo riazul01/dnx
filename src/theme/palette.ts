@@ -1,16 +1,7 @@
-import { PaletteColorOptions, PaletteOptions } from "@mui/material/styles";
-import {
-  gray,
-  darkGray,
-  transparentGray,
-  red,
-  green,
-  blue,
-  yellow,
-  white,
-} from "./colors";
+import { PaletteColorOptions, PaletteOptions } from '@mui/material/styles';
+import { gray, darkGray, transparentGray, red, green, blue, yellow, white } from './colors';
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface PaletteOptions {
     neutral?: PaletteColorOptions;
     transparent?: {
